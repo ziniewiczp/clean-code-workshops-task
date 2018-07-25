@@ -1,3 +1,8 @@
 <apex:page controller="ContactPointsPerAccountController">
-	
+	<apex:pageBlock title="Contact points per Account">
+        <apex:pageBlockTable value="{!accounts}" var="account">
+            <apex:column value="{!account.Name}"/>
+            <apex:column value="{!pointsByAccount[account.Id]}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
 </apex:page>
