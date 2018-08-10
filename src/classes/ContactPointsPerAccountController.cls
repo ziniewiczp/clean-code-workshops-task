@@ -4,6 +4,8 @@ public class ContactPointsPerAccountController {
     private Map<Id, Decimal> pointsByAccount;
 
     public List<Account> getAccounts() {
+        accounts = new List<Account>();
+        
         accounts = [SELECT Name, (SELECT Points__c FROM Contacts)
                     FROM Account
                     WHERE Name LIKE '%Test%'];        
