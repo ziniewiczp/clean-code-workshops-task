@@ -7,7 +7,7 @@ trigger AddPointsToRelatedContact on Task (before insert) {
                                       FROM Contact
                                       WHERE Id = :task.WhoId];
             
-            relatedContact.Points__c = (related.Contact.Points__c == null) ? 5 : relatedContact.Points__c + 5;
+            relatedContact.Points__c = (relatedContact.Points__c == null) ? 5 : relatedContact.Points__c + 5;
 
             if(relatedContact.Points__c > 10) {
                 relatedContact.Description = 'This is VIP Contact.';
