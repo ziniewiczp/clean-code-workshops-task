@@ -3,6 +3,7 @@
     <types>
         <members>ContactPointsPerAccountController</members>
         <members>ContactPointsPerAccountControllerTests</members>
+        <members>AddPointsToRelatedContactTests</members>
         <name>ApexClass</name>
     </types>
     <types>
